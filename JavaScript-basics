@@ -27,3 +27,103 @@ Use the "Var" keyword only for declaratin or initialization. You should not decl
 JavaScript is an untyped language. This means it can hold a value of any data type. The value type of a variable can change during execution of the program 
 and Javascript takes care of it automatically.
 
+# Strings
+A string is a sequence of characters that may consist of letters, numbers, or synmbols. String in JS are primitive data times and immutable.
+As Strings are the way we display and work with text and text is our main way of communicating and understanding through computers, Strings are
+one of the most fundamental concepts of programming to be familiar with.
+
+ Creating and viewing the output of strings 
+In JS, there are 3 ways of writing strings. They can be single quotes(''), They can be double quotes ("") or backticks(''). the type used must match on both sides
+however it is possible that all 3 styles be used in the same script.
+Strings using double quotes  and single quotes are effectively the same, there is no convention or official preference for single or double
+quoted strings. keeping consistent with project program files is all that matters 
+  e.g. 'This uses single quotes'
+  e.g. "This uses double quotes"
+
+#Functions
+A funtion is a group of reusable code which can be called anywhere in your program.This eliminates the need of writing the same code again and again
+Functions allow a programmer to divide a program into a small number of manageable functions
+JS supports all the necessary features to wwrite modular code using functions. Functions such as alert() and write() have been written in core JS.
+JS allows us to write our own functions as well.
+
+  Funtion Definition
+The most common way to define a function in JS is by using the function keyword, followed by a unique name, a list of parameters, and a statement block surrounded by curly braces
+  Syntax
+function functionName(parameter-list){
+  //statements
+}
+# Booleans
+Booleans are values that can be only one of two things: True or False
+Anything "On" or "Off", "Yes" or "No" or temporary is a usually good fit for a boolean. It's useful to store booleans in variables to keep
+track of their values and change them over time.
+
+# Type Conversion
+Most of the time, operators and functions automatically convert the values given to them to the right time e.g. alert automatically  converts any
+value to a string to show it. Mathematical operations convert values to numbers. There are also cases when we need to explicitly convert a value to
+the expected type.
+
+# String Conversion
+String Conversion happens when we need the string form of a value. 
+e.g. alert(value) does it to show the value
+We can also call the string(value) function to convert a value to a string 
+e.g. value = string(value)
+
+# Numeric Conversion
+Numeric conversion happens in mathematical funtiopns and expressions automatically
+e.g. alert("6"/"2"); //3  Strings are converted to numbers
+We can use the number(value) functionto explicitly convert a value to a number
+e.g. let num = number(str)
+Explicit conversion is usually required when we read a value from a string-based source like a text form but expect a number to be entered
+If a string is not a valid number, the result of such a conversionis NaN
+e.g. let age = number("an Arbitrary string instead of a number");
+alert(age);
+  Numeric conversion rules:
+Value                  Becomes
+-Undefined             NaN
+-Null                  0
+-True or False         1 and 0
+-String                white space removed
+
+-> Boolean Conversion
+It happens in logical operations, but can also be perfomed explicitly with a call to boolean(value)
+The converion rule: 
+  >Values that are intuitively "empty" like 0, an empty string, null, undefined and Nan become false
+  Other values become true
+
+-> Formatting numbers
+JS number format: main tips
+> Several JS number format methods are offered with this language that you can use to manipulate numeric values.
+> Each number method returns a new value instead of changing the one being used for the method.
+> Every JS number format method may be used on any type of number including literals, variables, expressions.
+ ->These are the go-to methods while working with numeric values:
+  >number(); Return number converted from its argument
+  >parseFloat(); Parse its argument and return a float
+  >parseInt(); Parse its argument and return an integer
+  >toString(); Return number as string
+  >toExponential(); Return string with numberrounded and written with exponential notations.
+  >toFixed(); Return string with rounded and written using a specified number of decimals
+  >toPrecision(); Return string with a number written with a specified length.
+  >valueOf(); Return number as a number
+
+->The Document Object Model and JavaScript Syntax
+The Document Object Model is an Application Programming Interface(API) for HTML and XML documents. it does two things for web developers
+ > Provides a structural representation of the document.
+ > Defines the way that the structure is to be accessed from script
+The JS syntax has to do with objects, to access an object, property or method.
+its reference must include every object that contains it, separated by a dot. This is called the "dot syntax"
+
+-> Object
+  > A JS Object is any scriptable HTML element, that is, any HTML element within a document that may be accessed through the JS language.
+  > Outside the context of a web page are core ojects. These objects are not associated with HTML elements, but with the language itself
+    then there are home made objects. core objects and home made objects are both associated with the JS object model.
+  > The following are some of the JS Objects:
+    - window
+    - document
+    - form
+    - image
+-> Property
+ > Objects have properties, which you can think of as characteristics of an object. 
+   A JS property has a similar relationship to the object it belogs to that an HTML tag attribute has to the tag that it contains it.
+ > There is one major exception: JS properties can also be objects. the object-property relationship is more like the relationship an <option>
+    tag has to the <select> tagthat contains it, but in JS, Theres is no difference in how you prefer to a plain old property and a 
+    property that is also an object.
