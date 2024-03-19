@@ -105,7 +105,7 @@ JS number format: main tips
   >toPrecision(); Return string with a number written with a specified length.
   >valueOf(); Return number as a number
 
-->The Document Object Model and JavaScript Syntax
+-> #The Document Object Model and JavaScript Syntax
 The Document Object Model is an Application Programming Interface(API) for HTML and XML documents. it does two things for web developers
  > Provides a structural representation of the document.
  > Defines the way that the structure is to be accessed from script
@@ -127,3 +127,69 @@ its reference must include every object that contains it, separated by a dot. Th
  > There is one major exception: JS properties can also be objects. the object-property relationship is more like the relationship an <option>
     tag has to the <select> tagthat contains it, but in JS, Theres is no difference in how you prefer to a plain old property and a 
     property that is also an object.
+ > A document, although contained by the window and therefore a property of the window object, is also considered an object. The same is true for a form and
+   an image, they are properties of the document object but also properties themselves. The rule for the dual properties is this: a property is also an object
+   if that property has its own properties and methods. it is best to think of objects with properties as objects.
+ 
+-> Method 
+ > Methods are actions that can be applied directly to objects. methods cause a boring old HTML document to react to the end-user. This results in a 
+   meaningful experience for the end-user otherwise would be completely one-sided.
+-> Method parameters 
+ > Methods are signified by parenthesis immediately following their name e.g. alert(); These parenthesis sometimes hold values called parameters, which are 
+   required by some methods.
+ > A parameter is simply information needed by a method to perform its task. for instance, the alert() method pops up an alert box without a parameter, the 
+   alert method will generate a dialog box alert(), which is meaningless. But with a parameter, the alert method will generate a dialog box alert("Hello World")
+   which communicates a massasge to the end user.
+ -> Here are a few Javascript methods
+    - alert() causes an alert dialog box to appear over the pages that launched it.
+    - write() writes content to a page
+    - focus() causes the mouse cursor to be inserted into a form element
+
+ -> Core APIs in the DOM 
+   > Document and Window objects are the objects whhose interfaces you generally use most often in DOM programming. The window object represents something like
+    the browser and the document object is the root of the document itself. Elements inherits from the generic node interface and together these two interface
+    provide many of the methods and properties you use on individual elements.
+  > The following is a brief list of common APIs in web and XML page scripting using the DOM
+    - document.getElementById(id)
+    - document.getElementsByTagName(name)
+    - document.createElement(name)
+    - parentNode.appendChild(node)
+    - element.innerHTML
+    - element.style.left
+    - element.setAttribute
+    - element.getAttribute
+    - element.addEventListner
+    - window._content
+    - window.onload
+    - window.dump()
+    - window.scrollTo()
+
+-> # Functions
+   > A Funtion is a subprogram designed to perform a particular task. A function will only execute if and only when it has been called. Values can be passed
+     into functions and used within that function as well. All funtions have a return value, otherwise they become undefined. A function is an object(HTML element
+     with properties and methods)
+  -> A function declaration is as follows
+       function name(parameters){//statements}
+
+ -> Calling one function from another function
+   > Code inside a function behaves just like anywhere else. This means you can call one function from inside another function, this allows you to nest functions
+     so that you can create separate functions, which each perform a specific task, and then run them together as a complete process.
+ 
+ -> Creating objects with user-defined functions
+   > Javascript is based on objects: the window is an object, links are objects, forms are objects, even Netscape itself is an object. Using objects can help
+     make programming easier and more streamlined. You can extend the use of objects in Javascript by making your own. the process uses functions in a slightly modified
+     way.
+
+ -> Making a new object entails two steps: 
+   > Define the object in a user-defined function
+   > Use the new keyword to create(or instantiate) the object with a call to the object function.
+     e.g. ret = new makeSimpleObject();
+          function makeSimpleObject(){}
+
+ -> Defining new properties to already-made objects
+   > After an object has been created you can assign a value to it, but instead of just assigning a value to the object itself, you should define a new property 
+     for the object, and assign a value to the property. To create a new property and assign a value to it, simply wite a variable expression like this:
+     e.g. myObject.property = value
+   > myObject is the name of the user-defined object
+   > property is the name of the property you want to create
+   > Value is the value you want to assign.
