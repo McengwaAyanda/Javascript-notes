@@ -247,3 +247,34 @@ its reference must include every object that contains it, separated by a dot. Th
    > The return value matches the expression to the right of the "=" sign in the "meaning" column of the table above. that means that (x=y) returns y,
      (x += y) returns the resulting sum x+y, (x**=y) returns the resulting power x**y, and so on.
    > In the case of logical assignments, (x&&=y), (x||=y) and (x??=y), the return value is that of the logical operation without the assignment so x&&y, x||y and x??y.
+   > The return values are always based on the operands values before operation.
+   > When chaining these expressions, each assignment is evaluated right-to-left.
+    - e.g. w=z=x=y is equal to w = (z = (x =)) or x=y; z=y; w=y
+    - e.g. z += x*=y is equivalent to z+=(x*=y) or tmp = x*y; x*=y; z+=tmp (except without the tmp)
+
+-> Destructuring
+ > The destructuring assignment syntax is a JS expression that makes it possible to extract data from
+    arrays or objects using a syntax that mirrors the construction of array and object literals.
+    e.g. var foo = ['one', 'two', 'three']
+    // without destructuring
+    var one = foo[0];
+    var two = foo[1];
+    var three = foo[2];
+   // with destructuring
+    var [one, two, three] = foo;
+
+-> Comparison Operators
+ > A comparison operator compares its operands and returns a logical value based on whether the
+   comparison is true. The operands can be numerical, string, logical, or object values. Strings are 
+   compared based on standard lexicographical ordering, using unicode values. 
+   If the two operands are not the same data types, JS attempts to convert them to appropriate types
+   for comparison. This behavior generally results in comparing the operands numerically. The sole
+   exceptions to type conversion within comparisons include "===" and "!==" operators, which perform
+   strict equality and inequality comparisons. These operators do not attempt to convert the operands
+   to compatible types before checking equality.
+
+-> Arithmetic Operators
+ > An arithmetic operator takes numerical values(either literals or variables) as their operands
+   and returns a single numerical value.
+ > The standard arithmetic operators are addition(+), subtraction(-), multiplication(*) and division(/).
+ > These  operators work as they do in most other programming languages when used with floating point numbers.
