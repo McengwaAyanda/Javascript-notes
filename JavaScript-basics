@@ -84,13 +84,13 @@ Value                  Becomes
 -True or False         1 and 0
 -String                white space removed
 
--> Boolean Conversion
+# Boolean Conversion
 It happens in logical operations, but can also be perfomed explicitly with a call to boolean(value)
 The converion rule: 
   >Values that are intuitively "empty" like 0, an empty string, null, undefined and Nan become false
   Other values become true
 
--> Formatting numbers
+# Formatting numbers
 JS number format: main tips
 > Several JS number format methods are offered with this language that you can use to manipulate numeric values.
 > Each number method returns a new value instead of changing the one being used for the method.
@@ -105,7 +105,7 @@ JS number format: main tips
   >toPrecision(); Return string with a number written with a specified length.
   >valueOf(); Return number as a number
 
--> #The Document Object Model and JavaScript Syntax
+# The Document Object Model and JavaScript Syntax
 The Document Object Model is an Application Programming Interface(API) for HTML and XML documents. it does two things for web developers
  > Provides a structural representation of the document.
  > Defines the way that the structure is to be accessed from script
@@ -145,7 +145,7 @@ its reference must include every object that contains it, separated by a dot. Th
     - write() writes content to a page
     - focus() causes the mouse cursor to be inserted into a form element
 
- -> Core APIs in the DOM 
+ # Core APIs in the DOM 
    > Document and Window objects are the objects whhose interfaces you generally use most often in DOM programming. The window object represents something like
     the browser and the document object is the root of the document itself. Elements inherits from the generic node interface and together these two interface
     provide many of the methods and properties you use on individual elements.
@@ -164,11 +164,11 @@ its reference must include every object that contains it, separated by a dot. Th
     - window.dump()
     - window.scrollTo()
 
--> # Functions
+ # Functions
    > A Funtion is a subprogram designed to perform a particular task. A function will only execute if and only when it has been called. Values can be passed
      into functions and used within that function as well. All funtions have a return value, otherwise they become undefined. A function is an object(HTML element
      with properties and methods)
-  -> A function declaration is as follows
+  > A function declaration is as follows
        function name(parameters){//statements}
 
  -> Calling one function from another function
@@ -193,3 +193,57 @@ its reference must include every object that contains it, separated by a dot. Th
    > myObject is the name of the user-defined object
    > property is the name of the property you want to create
    > Value is the value you want to assign.
+
+ -> Defining properties when you create the object
+   > Another method of defining properties for objects is to include the property names in the object function. You can use this technique to simultaneously 
+     create a new object and define the property values
+     e.g. customer = new makeCustomer("Fred", "123 main street", "555-1212");
+          alert(customer.name);
+          
+          function makeCustomer(name, address, phone){
+          this.name = name;
+          this.address = address;
+          this.phone = phone;
+        }
+   -> Each this statement assigns a property to the current object, which is the one being created in the makeCustomer object function. Three parameters are
+      passed to the object statement: the customer's name, address, and phone number. These parameters are used to define the contents of the three properties.
+   -> Javascript imposes no limitations on the number of properties you can assign to an object. To include as customer object, jut do this:
+      e.g. customer = new makeCustomer("Fred", "123 main street", "555-1212")
+          customer.salutation = "Mr. ";
+
+   -> Note that other objects you create with the makeCustomer object function will have just these three base properties but this object for Fred will have
+      an additional property for the salutation. properties added later do not affect other objects created with the same object function.
+
+  -> Operators
+   > JS has the following types of operators, this section describes the operators and contains information about operator precedence
+     - Assignment Operators
+     - Comparison Operators
+     - Arithmatic Operators
+     - Bitwise Operators
+     - Logical Operators
+     - String Operators
+     - Conditional(ternary) Operators
+     - Comma Operators
+     - Unary Operators
+     - Relational Operators
+
+  > JS has both binary and unary operators and one special ternary operator, the Conditional operator. 
+    > A binary operator require two operands, one before the operator and one after the operator.
+      e.g. operand1 + operand2
+           3 + 4 or x*y
+    > A Unary operator requires a single operand, either before or after the operator:
+      e.g. operator operand or operand operator
+
+ -> Assignment Operator
+  > Return value and chaining
+   - Like most expressions, assignments like x=y have a return value, it can be retrieved by e.g. assigning the expression or logging it to the console.
+   - An Assignment operator assigns a value to its left operand based on the value of its right operand. that is x=y assigns the value of y to x.
+   - There are also compound assignment operators that are shorthand for the operations listed in the following table.
+
+ -> Compound Assignment Operator
+   - const z = (x=y); //or equivalent; const z = x = y
+   - console.log(z); // log the return value of the assignment x=y
+   - console.log(x=y); // or log the return value directly
+   > The return value matches the expression to the right of the "=" sign in the "meaning" column of the table above. that means that (x=y) returns y,
+     (x += y) returns the resulting sum x+y, (x**=y) returns the resulting power x**y, and so on.
+   > In the case of logical assignments, (x&&=y), (x||=y) and (x??=y), the return value is that of the logical operation without the assignment so x&&y, x||y and x??y.
