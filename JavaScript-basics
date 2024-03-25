@@ -278,3 +278,82 @@ its reference must include every object that contains it, separated by a dot. Th
    and returns a single numerical value.
  > The standard arithmetic operators are addition(+), subtraction(-), multiplication(*) and division(/).
  > These  operators work as they do in most other programming languages when used with floating point numbers.
+
+-> Bitwise Operators
+ > a bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather than decimal, hexadecimal,
+   or octal numbers. Bitwise operators perfom their operations on such binary representation, but the return standard
+   JS numerical values
+
+-> Bitwise Logical Operators
+ > The operands are converted to 32bit intergers and expressed by a series of zeros and ones(bits).numbers with
+   more than 32bits get most of their significant bits discarded.
+   e.g. var x = [0,1,2,3,4,5,6,7,8,9];
+        var a = [x,x,x,x,x];
+      for (var i=0, j=9; i<=j; i++, j--);
+      console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
+ > Each bit in the first operand is paired with the corresponding bit in the second operand
+ > The operator is applied to each pair of bits, and the results is constructed bitwise.
+
+-> Bitwise Shift Operators
+ > Nitwise shift operators take two operands: the first is a quantity to be shifted and the second
+   specifies the number of bits positions by which the first operand is to be shifted. the direction
+   of the operation is controlled by the operator used.
+ > Shift operators convert their operands to 32-bit integers and return a result of the same type as
+   the left operand.
+
+-> Logical Operators
+ > Logical operators are typically used with boolean values: When they are, they return a boolean value
+   However, the && and || operators return the value of one of the specified operands, so if these
+   operators are used with non-boolean values, the may return a non-boolean value.
+ > Examples of expressions that can be converted to false are those that evaluate to null, 0, NaN, empty 
+   string, or undefined.
+
+-> Short-circuit evaluation
+ > As logical expressions are evaluated left-to-right, they are tested for possible "short-circuit" evaluation using the following rules:
+  - false&&anything is short-circuit evaluated to false
+  - true||anything is short-circuit evaluated to true
+ > The rules of logic guarantee that these evaluations are always correct. Note that the anything is not evaluated
+   so any side effects of doing so do not take effect.
+ > In mordern code you can use the new nullish coalescing operator(??) that works like ||, but it only returns the seconds
+   expression, when the first one is "nullish", i,e null or undefined. it is a better alternative
+   to provide defaults when values like '' or 0 are valid for the first expression, too.
+
+-> String Operators
+ > In addition to the comparison operators, which can be used on string values, the concatenation operator (+) concatenates
+   two string values together, returning another string that is the union of the two operand strings.
+ > The Shorthand assignment operator += can also be used to concatenate strings.
+
+-> Conditional(ternary) Operator
+ > The Conditional operator is the only JS operator that takes three operands. The operator can have one of two values 
+   based on a condition. The syntax is:
+    e.g. condition ? val1: val2
+ > if condition is true, the operator has the value of val1. otherwise it has the value of val2.
+   you can use the conditional operator anywhere you would use a standard operator.
+
+-> Comma Operator
+ > The comma operator evaluates both of its operands and returns the value of the last operand. 
+   This operator is primarily used inside a for loop, to allow multiple variables to be updated each time through the loop.
+    it is regarded bad style to use it elsewhere, when it is not necessary. Often two separate statements can and should be used instead.
+    e.g. var x = [0,1,2,3,4,5,6,7,8,9];
+           var a = [x,x,x,x,x];
+         for (var i=0, j=9; i<=j; i++, j--);
+         console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
+
+-> Unary Operator
+ > A Unary operation is an operation with only one operand
+ > The Delete operator deletes an objects property. The syntax is:
+   e.g. delete object.property;
+        delete object[propertyKey]
+        delete objectName[index];
+        delete property;
+ > Since arrays are just objects, its technically possible to delete elements from them. When you delete an array property, the array
+   length is not affected and elements are not re-indexed. to achieve that behaviour, it is much better to just overwrite the element with
+   the value undefined. To actually manipulate the array, use the various array methods such as splice.
+
+-> TypeOf
+ > The typeOf operator returns a string indicating the type of the unevaluated operand. operand is the string, variable, keyword or object for
+   which the type is to be returned. the parentheses are optional
+
+-> void
+ > The void operator specifies an expression to be evaluated without returning a value. expression is a JS expression to evaluate
+ > The parentheses surrounding the expression are optional, but it is good style to use them
