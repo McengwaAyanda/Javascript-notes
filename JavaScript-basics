@@ -357,3 +357,89 @@ its reference must include every object that contains it, separated by a dot. Th
 -> void
  > The void operator specifies an expression to be evaluated without returning a value. expression is a JS expression to evaluate
  > The parentheses surrounding the expression are optional, but it is good style to use them
+   e.g. void (expression) or void expression.
+
+-> Relational Operator
+ > A relational operator compares its operand and returns a boolean value based on whether the comparison is true.
+ > The in operator returns true if the specified property is in the specified object. the syntax is:
+   e.g. propNameOrNumber in objectName
+ > Where propNameOrNumber is a string, numeric, or symbol expression representing a property name or array index and objectName is the name of an object.
+
+-> instanceOf
+ > The instanceOf operator returns true if the specified object is of the specified object type. The syntax is:
+   e.g. objectName instanceOf objectType
+ > where objectName is the name of the object to compare to objectType, and the objectType is an object type such as date or array.
+ > Use instanceOf when you need to confirm the type of an object at runtime.
+
+-> Operator Precedence
+ > The precedence of operators determines the order they are applied when evaluating an expression. You can override operator precedence by using parenthesis
+
+-> Event Bubbling
+ > The event starts at the element that triggered it, then, it bubbles up to each of its parent element until it reaches the document.
+   Any listeners on any of those parent elements would get triggered as it bubbles up. causing all the events to occur on the page possibly slowing down your application.
+ > e.g. forms, the event would bubble up to the parent form, then any containers or divs the form was in, then the body, then html element, then the document, then the window.
+
+-> Event Delegation
+ > Event delegation is a technique for listening to event where you delegate a parent element as the listner for all the events that happen inside it.
+ > So instead of adding event listener to each button you would just add and event listener to the parent element and target the child element
+
+-> Regular Expressions
+ > A regular expression is a sequence of characters that forms a search pattern. 
+ > The search pattern can be used for text search and text replace operations
+ > A regular expressioncan be a single character, or a more complicated pattern.
+ > Regular expressions can be used to perform all types of text search and text replace operations
+
+# JS Methods and "this" keyword
+ -> Accessing Object Methods
+  > You can access an object method using a dot notation. the syntax is:
+    e.g objectName.methodKey()
+ > You can access a method by calling an objectName and a key for that method along with(). And you can access property only by
+   calling an objectName and a key.
+
+-> JS Built-in Methods
+ > In IS, there are many built-in methods
+  e.g. let number = '23.32'
+       let result = parseInt(number)
+       console.log(result); // 23
+
+-> JS this keyword
+ > To access a property of an object from within a method of the same object, you need to use the this keyword.
+ > In order to access the properties of an object, this keyword is used following with .andkey
+ > Note: In JS, this keyword when used with the objects method refere to the object. this is bound to an object
+ > However, the function inside of an object can access it variable in a similar was as a normal function would.
+
+# Day 3 - Javascript Forms
+-> Switch Statements
+ > The switch statement is used to perform different actions based on different conditions
+ > Use the switch statement to select one of many code blocks to be executed
+ > Syntax:   switch(expression){
+                  case x:
+                  // code block
+                     break;
+                  case y:
+                  // code block
+                     break;
+                  default;
+                  // code block  
+ }
+ > The switch expression is evaluated once.
+ > The value of the expression is compared with the values of each case
+ > If there is a match, the associated block of code is executed
+ > If there is no match, the default code block is executed
+ > The Break keyword
+   - When JS reaches a break keyword, it breaks out of the switch block
+   - This will stop the execution of inside the block
+   - It is not necessary to break the last case in a switch block. the block breakes there anyway.
+ > The Default keyword
+   - The default keyword specifies the code to run if there is no case match:
+   - If default is not the last case in the switch block, remember to end the default case with a break.
+ > Common Code blocks
+   - Sometimes you will want different switch cases to use the same code.
+   - Switching Details
+      If multiple cases matches a case value, the first case is selected.
+      If no matching cases are found, the program continues to the default label
+      if no default label is found, the program coninues to the statement(s) after the switch
+ > Strict Comparison
+   - Switch cases use strict comparison (===)
+   - The values must be of the same type to match
+   - A strict comparison can only be true if the operands are of the same type.
