@@ -443,3 +443,147 @@ its reference must include every object that contains it, separated by a dot. Th
    - Switch cases use strict comparison (===)
    - The values must be of the same type to match
    - A strict comparison can only be true if the operands are of the same type.
+
+# Week 3 Event Handling
+-> day 1 JavaScript Events
+-> String Operations
+ > Creating Strings
+ > Strings are like words or sentences that we can use in our computer programs. 
+   We can create strings in different ways. We can just write them with single or double quotes, 
+   or we can use a special kind of quotes called backticks. 
+   Sometimes we can also use a special code called a constructor to create strings.
+> Once we have a string, we can do different things with it. 
+  We can look at each letter in the string, and there are two ways to do that. 
+  We can use a method called 'charAt()', or we can think of the string as a bunch of letters 
+  in a list and find a letter by its position in the list.
+> In some cases, we might want to compare strings to see if they are the same or 
+  which one comes first. In other programming languages, there is a special function 
+  called 'strcmp()' for this, but in JavaScript, we can just use the less-than and greater-than 
+  symbols.
+> Sometimes we want to compare strings without worrying about whether the letters are uppercase 
+  or lowercase. In those cases, we can use a special method called 'localeCompare()', 
+  or we can write our own function.
+> It's important to know that there is a difference between String objects and 
+  primitive string values. We can convert between them if we need to.
+> Sometimes when we use certain functions or evaluate code, we need to be careful
+  if we are using a String object or a primitive string. But most of the time, 
+  we don't need to worry about it. We can always change a String object to a primitive 
+  string if we want to."
+
+-> On-Event Handlers
+ > Event handlers are like special instructions that we can give to objects on a webpage. 
+   These objects can be things you can click on, like buttons or links, or even things on the page 
+   itself. Events are things that happen, like when you click on a button or press a key on the 
+   keyboard.
+ > We can tell objects how to react when these events happen by using event handlers. 
+   Event handlers have names that match the event they are meant for. 
+   For example, if we want to do something when a button is clicked, we use the onclick event handler.
+ > There are different ways to specify an event handler for an event. We can write the code 
+   directly in the HTML using a special attribute, like onclick="return handleClick(event);". 
+   Or we can write the code in JavaScript and set it as a property of the object, 
+   like document.getElementById("mybutton").onclick = function(event) { ... }.
+ > It's important to know that each object can only have one event handler for a specific event. 
+   But that event handler can do many different things. If we want to have multiple event handlers 
+   for the same event, we can use a special function called addEventListener().
+ > When an event handler is called, it receives information about the event, like what was 
+   clicked or which key was pressed. Inside the event handler, the "this" keyword refers to the 
+   object that the event handler belongs to. The event handler can also decide whether to 
+   cancel the event or let it continue.
+ > Sometimes people use the term "event handler" to refer to any function or object that listens 
+   to events. But it can also specifically mean the way we register event listeners using on... 
+   attributes or properties.
+ > Overall, event handlers help us make our webpages interactive and control what happens when
+   things are clicked or pressed.
+
+-> Event Handler specific Rules
+ > Certain event handlers have specific rules that apply to them. These rules state that
+   they must be supported by all HTML elements except for the body and frameset elements. 
+   These event handlers can be used both as content attributes and IDL (Interface Definition Language)
+   attributes. Additionally, they must be supported by all Document objects and Window objects as 
+   IDL attributes. For Window objects, the corresponding event handler content attributes and IDL 
+   attributes should also be exposed on all body and frameset elements owned by that Window object's 
+   Documents.
+ > Here is a list of event handlers that can be used in HTML5 elements, Document objects, 
+   and Window objects:
+ - onabort: Triggered when an event is aborted, such as when the browser stops downloading media
+   data before it's fully downloaded.
+ - oncancel: Handles the cancel event.
+ - oncanplay: Invoked when the browser can start playing media but hasn't started yet due 
+   to buffering.
+ - oncanplaythrough: Indicates that if the media started playing now, it could be played to the
+   end without further buffering.
+ - onchange: Triggered when the user changes an object, such as filling out a form field and 
+   then clicking elsewhere.
+ - onclick: Invoked when the user clicks on an object.
+ - oncuechange: Handles the cuechange event.
+ - ondblclick: Triggered when the user double-clicks on an object.
+ - ondurationchange: Invoked when the duration of the media changes.
+ - onemptied: Triggered when a media resource suddenly becomes empty, for example, due to a 
+   network error.
+ - onended: Invoked when the media has reached its end.
+ - oninput: Handles the input event.
+ - oninvalid: Handles the invalid event.
+ - onkeydown: Triggered when a key is pressed over an element.
+ - onkeypress: Invoked when a key is pressed over an element and then released.
+ - onkeyup: Triggered when a key is released over an element.
+ - onloadeddata: Invoked when the browser can render the media data at the current playback 
+   position for the first time.
+ - onloadedmetadata: Invoked when the browser determines the duration and dimensions of the 
+   media resource.
+ - onloadstart: Triggered when the browser starts loading the media resource.
+ - onmousedown: Invoked when the cursor moves over the object and the mouse or pointing device 
+   is pressed down.
+ - onmouseenter: Triggered when the cursor enters the outer element (not the inner element).
+ - onmouseleave: Invoked when the cursor leaves the element.
+ - onmousemove: Triggered when the cursor moves while hovering over an object.
+ - onmouseout: Invoked when the cursor moves off the object.
+ - onmouseover: Triggered when the cursor moves over the object.
+ - onmouseup: Invoked when the mouse or pointing device is released after being pressed down.
+ - onmousewheel: Triggered when the mouse wheel is rotated.
+ - onpause: Invoked when the media resource has been paused.
+ - onplay: Triggered when the media resource starts playback.
+ - onplaying: Indicates that playback has begun.
+ - onprogress: Indicates that the browser is fetching media data.
+ - onratechange: Invoked when the playback rate has changed.
+ - onreset: Handles the reset event.
+ - onseeked: Invoked when the seeking attribute changes to false.
+ - onseeking: Invoked when the seeking attribute changes to true and the seek operation takes 
+   enough time for the event to be fired.
+ - onselect: Triggered when some or all of the contents of an object are selected.
+ - onshow: Handles the show event.
+ - onstalled: Invoked when the browser is trying to fetch media data, but the data has stalled.
+ - onsubmit: Triggered when the user submits a form.
+ - onsuspend: Indicates that the browser is intentionally not currently fetching media data but
+   has not yet downloaded the entire media resource.
+ - ontimeupdate: Invoked when the media's current playback position changes.
+ - ontoggle: Triggered when a details element is opened or closed.
+ - onvolumechange: Invoked when either the volume or muted attribute changes.
+ - onwaiting: Indicates that the next frame of the media is not yet available.
+-> These event handlers help developers control and respond to various actions and changes happening
+   on web pages.
+
+-> Day 2 Dynamic JavaScript Techniques
+-> Dynamic HTML
+ > Imagine you have a box, and you can make it look different by using special markers and
+   stickers. That's like HTML, where you can create web pages and make them look nice.
+   But sometimes, you want the box to change when something happens. 
+   For example, maybe you want it to become bigger or change color when someone clicks on it. 
+   That's where CSS and JavaScript come in.
+ > CSS is like the special markers and stickers. It helps you change how the box looks. 
+   You can change the color, the size, and even the font of the text inside the box.
+ > JavaScript is like a set of special instructions. It helps you make the box do things 
+   when something happens, like when you click on it or move your mouse over it. 
+   You can make the box move around the page or even change what it says.
+ > To make these changes, you can use different methods. You can either change the class of the 
+   box, which is like using a different set of markers and stickers to give it a new look. 
+   Or you can use the style property, which is like using specific markers and stickers to change 
+   its appearance directly.
+ > JavaScript functions are like special recipes. They tell the computer what to do with the box.
+   You can either tell the function to work with a specific box by using its special name, or
+   you can tell it to work with any box by giving it the name of the box you want to change.
+ > Sometimes, you can even use events to help you find the box you want to change. 
+   Events are like little signals that tell you when something happens. You can use these 
+   signals to figure out which box was clicked on or where the mouse is, and then you can change 
+   that box.
+ > So, by using CSS and JavaScript together with HTML, you can make web pages that are not 
+   only nice to look at but also can do cool things when you interact with them!"
