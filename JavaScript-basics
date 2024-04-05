@@ -1,13 +1,14 @@
-# Java Basics
+# Week 1 Basic Syntax
 
-# Comments
+-> Day 1- Javascript 1: Variable, Operators, Assignments
+-> Comments
 Comments are lines of code that are ignored intentionally. They are a great way to make notes for yourself and people reading your code.
 There are two types of comments in Javascript
 1. // this is an inline comment
 2. /**/ this is a multi-line comment
 Good commenting can help communicate the intent of your code, both for others and your future self.
 
-# Variables
+-> Variables
 One of the most fundamental characteristics of a programmining language is the type of data it supports. These are the type of values that can be manipulated 
 and represented in a programmining language.
 Javascript allows you to work with primitive data types
@@ -27,7 +28,7 @@ Use the "Var" keyword only for declaratin or initialization. You should not decl
 JavaScript is an untyped language. This means it can hold a value of any data type. The value type of a variable can change during execution of the program 
 and Javascript takes care of it automatically.
 
-# Strings
+-> Strings
 A string is a sequence of characters that may consist of letters, numbers, or synmbols. String in JS are primitive data times and immutable.
 As Strings are the way we display and work with text and text is our main way of communicating and understanding through computers, Strings are
 one of the most fundamental concepts of programming to be familiar with.
@@ -40,7 +41,7 @@ quoted strings. keeping consistent with project program files is all that matter
   e.g. 'This uses single quotes'
   e.g. "This uses double quotes"
 
-#Functions
+-> Functions
 A funtion is a group of reusable code which can be called anywhere in your program.This eliminates the need of writing the same code again and again
 Functions allow a programmer to divide a program into a small number of manageable functions
 JS supports all the necessary features to wwrite modular code using functions. Functions such as alert() and write() have been written in core JS.
@@ -52,23 +53,23 @@ The most common way to define a function in JS is by using the function keyword,
 function functionName(parameter-list){
   //statements
 }
-# Booleans
+-> Booleans
 Booleans are values that can be only one of two things: True or False
 Anything "On" or "Off", "Yes" or "No" or temporary is a usually good fit for a boolean. It's useful to store booleans in variables to keep
 track of their values and change them over time.
 
-# Type Conversion
+-> Type Conversion
 Most of the time, operators and functions automatically convert the values given to them to the right time e.g. alert automatically  converts any
 value to a string to show it. Mathematical operations convert values to numbers. There are also cases when we need to explicitly convert a value to
 the expected type.
 
-# String Conversion
+-> String Conversion
 String Conversion happens when we need the string form of a value. 
 e.g. alert(value) does it to show the value
 We can also call the string(value) function to convert a value to a string 
 e.g. value = string(value)
 
-# Numeric Conversion
+-> Numeric Conversion
 Numeric conversion happens in mathematical funtiopns and expressions automatically
 e.g. alert("6"/"2"); //3  Strings are converted to numbers
 We can use the number(value) functionto explicitly convert a value to a number
@@ -84,13 +85,13 @@ Value                  Becomes
 -True or False         1 and 0
 -String                white space removed
 
-# Boolean Conversion
+-> Boolean Conversion
 It happens in logical operations, but can also be perfomed explicitly with a call to boolean(value)
 The converion rule: 
   >Values that are intuitively "empty" like 0, an empty string, null, undefined and Nan become false
   Other values become true
 
-# Formatting numbers
+-> Formatting numbers
 JS number format: main tips
 > Several JS number format methods are offered with this language that you can use to manipulate numeric values.
 > Each number method returns a new value instead of changing the one being used for the method.
@@ -105,7 +106,7 @@ JS number format: main tips
   >toPrecision(); Return string with a number written with a specified length.
   >valueOf(); Return number as a number
 
-# The Document Object Model and JavaScript Syntax
+-> The Document Object Model and JavaScript Syntax
 The Document Object Model is an Application Programming Interface(API) for HTML and XML documents. it does two things for web developers
  > Provides a structural representation of the document.
  > Defines the way that the structure is to be accessed from script
@@ -145,7 +146,7 @@ its reference must include every object that contains it, separated by a dot. Th
     - write() writes content to a page
     - focus() causes the mouse cursor to be inserted into a form element
 
- # Core APIs in the DOM 
+ -> Core APIs in the DOM 
    > Document and Window objects are the objects whhose interfaces you generally use most often in DOM programming. The window object represents something like
     the browser and the document object is the root of the document itself. Elements inherits from the generic node interface and together these two interface
     provide many of the methods and properties you use on individual elements.
@@ -164,7 +165,7 @@ its reference must include every object that contains it, separated by a dot. Th
     - window.dump()
     - window.scrollTo()
 
- # Functions
+ -> Functions
    > A Funtion is a subprogram designed to perform a particular task. A function will only execute if and only when it has been called. Values can be passed
      into functions and used within that function as well. All funtions have a return value, otherwise they become undefined. A function is an object(HTML element
      with properties and methods)
@@ -389,7 +390,7 @@ its reference must include every object that contains it, separated by a dot. Th
  > A regular expressioncan be a single character, or a more complicated pattern.
  > Regular expressions can be used to perform all types of text search and text replace operations
 
-# JS Methods and "this" keyword
+-> JS Methods and "this" keyword
  -> Accessing Object Methods
   > You can access an object method using a dot notation. the syntax is:
     e.g objectName.methodKey()
@@ -445,7 +446,7 @@ its reference must include every object that contains it, separated by a dot. Th
    - A strict comparison can only be true if the operands are of the same type.
 
 # Week 3 Event Handling
--> day 1 JavaScript Events
+# day 1 JavaScript Events
 -> String Operations
  > Creating Strings
  > Strings are like words or sentences that we can use in our computer programs. 
@@ -562,7 +563,7 @@ its reference must include every object that contains it, separated by a dot. Th
 -> These event handlers help developers control and respond to various actions and changes happening
    on web pages.
 
--> Day 2 Dynamic JavaScript Techniques
+# Day 2 Dynamic JavaScript Techniques
 -> Dynamic HTML
  > Imagine you have a box, and you can make it look different by using special markers and
    stickers. That's like HTML, where you can create web pages and make them look nice.
@@ -587,3 +588,125 @@ its reference must include every object that contains it, separated by a dot. Th
    that box.
  > So, by using CSS and JavaScript together with HTML, you can make web pages that are not 
    only nice to look at but also can do cool things when you interact with them!"
+
+-> Date Object
+ > "The Date object in JavaScript is like a special container that can hold the current date 
+  and time. It has special tools inside it that can help us do different things with dates.
+  
+ > When we create a new Date object without giving it any instructions, it automatically 
+   sets itself to the current date and time on the computer. It looks at the settings on the 
+   computer to figure out what the current date and time are.
+   
+ > To understand how the Date object works, let's pretend we have a special box called 'dateBox'. 
+   We can put the current date and time inside this box. Today is Wednesday, October 18th in London.
+   So, if we look inside the 'dateBox', we will see the current date, time, and the place where 
+   we are (London, GMT)."
+ > The date and time are shown to us in a special way so that we can read and understand them.
+   But JavaScript, which is a special language, understands the date in a different way.
+   It uses a special number called a "timestamp" that tells us how many milliseconds have 
+   passed since a very long time ago. It's like counting how many seconds have passed since 
+   a specific moment. We can find out this special number using a tool called the 
+   "getTime() method".
+ > The big number that we see when we look at the timestamp actually represents the same 
+   date as before, which is October 18th, 2017.
+ > There is a special time called "Epoch time" or "zero time" that starts at a specific 
+   moment: January 1st, 1970, at exactly midnight, in a place called Universal Time (UTC). 
+   This moment is represented by the date and time "01 January, 1970 00:00:00 Universal Time 
+   (UTC)" and it has a special number called a "timestamp," which is 0.
+ > We can test this in a web browser by making a new box called a "variable" and putting 
+   inside it a new Date that starts at the timestamp of 0.
+ > In the early days of programming, a special way of measuring time called "Epoch time" 
+   was chosen as a standard for computers. This is the same method that JavaScript uses to
+   understand time. It's important to know about two things: the "timestamp," which is a special
+   number, and the "date string," which is a way of writing dates and times in a human-readable
+   format. Depending on the settings and what we want to do with a computer program, we might
+   use either the timestamp or the date string.
+ > So far, we have learned how to create a new Date object using the current time or using
+   a timestamp. But there are actually four different ways to create a new Date in JavaScript. 
+   Besides the default current time and the timestamp, we can also use a date string 
+   (which is like writing the date in words) or specify specific dates and times.
+
+-> Retrieving the date with get
+ > After we have a date, we can use special tools called "methods" to access different parts 
+   of the date. These methods are already built into JavaScript. When we use these methods, 
+   they will give us back specific numbers that represent each part of the date, like the year,
+   month, day, and so on. It's important to note that these methods will give us the date and
+   time based on the place where we are (our local timezone). Each of these methods starts with
+   the word "get" and will give us the corresponding number. 
+ > The built-in Date methods that begin with get allow us to access date components that
+   return the number associated with what we are retrieving from the instantiated object.
+
+-> Retrieving the date with set
+ > For each of the "get" methods we learned about earlier, there is a corresponding "set" 
+   method. While the "get" methods retrieve specific components from a date, the "set" 
+   methods allow us to change or modify those components. The table below provides details about
+   the "set" methods available in the Date object:
+
+   Date/Time          Method                Range  Example
+   Year               setFullYear()         YYYY   1970
+   Month              setMonth()            0-11   0 = January
+   Day (of the month) setDate()             1-31   1 = 1st of the month
+   Day (of the week)  setDay()              0-6    0 = Sunday
+   Hour               setHours()            0-23   0 = midnight
+   Minute             setMinutes()          0-59   
+   Second             setSeconds()          0-59
+   Millisecond        setMilliseconds()     0-999
+   Timestamp          setTime()             Milliseconds since Epoch time
+
+ > We can use these "set" methods to change one or more components of a date. 
+   For example, we can modify the year of a variable called "birthday" to be 1997 instead of 1980.
+   In the example above, when we access the "birthday" variable, we will see the updated year 
+   as part of the output.
+   The "set" methods provided by JavaScript allow us to modify different parts of a Date object.
+
+-> Date methods with UTC
+  > The "get" methods we talked about earlier retrieve the components of a date based on 
+    the user's local timezone settings. However, if you want more control over dates and times,
+    you can use the "getUTC" methods. These methods are exactly like the "get" methods, 
+    but they calculate the time based on the UTC (Coordinated Universal Time) standard, 
+    which is a global time standard. Below is a table that shows the UTC methods available in the
+    JavaScript Date object.
+
+    Date/Time          Method                 Range    Example  
+    Year               getUTCFullYear()       YYYY     1970  
+    Month              getUTCMonth()          0-11     0 = January  
+    Day (of the month) getUTCDate()           1-31     1 = 1st of the month  
+    Day (of the week)  getUTCDay()            0-6      0 = Sunday  
+    Hour               getUTCHours()          0-23     0 = midnight  
+    Minute             getUTCMinutes()        0-59
+    Second             getUTCSeconds()        0-59  
+    Millisecond        getUTCMilliseconds()   0-999  
+
+ > To test the difference between local and UTC get methods, we can run the following code.
+ > When you run this code, it will show you the current hour in your local timezone and also 
+   in the UTC timezone. If you happen to be in the UTC timezone, the numbers displayed will 
+   be the same.
+ > UTC is helpful because it provides a standard reference for time that is used internationally.
+   This can be useful in keeping your code consistent across different timezones, especially
+   if it's important for what you're developing.
+
+-> Adding and Subtracting from a given date
+ > The Date setters are like special buttons that you can use to change different parts of 
+   a date. For example, one of the setters called setDays() expects a number between 1 and 31 
+   to represent the day. But here's an interesting thing: if you try to use a number that is 
+   too big or too small, the date will automatically roll over to the next or previous month.
+ > Let's say you try to set the day to 30 in the month of February. Since February doesn't 
+   have 30 days, the date will roll over to March.
+ > This rolling over happens not just for the day, but for other parts of the date too. 
+   It even knows about leap years!
+ > Whether this rolling over rounds the date or not depends on what you want. Sometimes you
+   might want to include a part of a day, and sometimes you might not. It's up to you to decide 
+   if you want it to round or not.
+
+# Day 3 Keyboard, Form, and Document/Window Events
+-> When you press or let go of a key on the keyboard, a special event called a 
+   "keyboard event" is triggered. Similarly, when you interact with a form on a website, like
+   clicking inside a text box or changing its value, a "form event" is triggered. 
+   Additionally, there are events related to the whole document or the browser window, 
+   such as when a page finishes loading or when you resize the window.
+
+-> These events are super helpful because they allow you to make your websites more interactive
+   and engaging. They give you the power to create interesting things that respond to the 
+   user's actions.
+
+-> Keyboard Events
