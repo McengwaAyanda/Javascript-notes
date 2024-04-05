@@ -710,3 +710,27 @@ its reference must include every object that contains it, separated by a dot. Th
    user's actions.
 
 -> Keyboard Events
+-> The Keydown Event(onKeydown)
+ > The keydown event occurs when the user presses down a key on the keyboard. 
+   You can handle the keydown event with the onkeydown event handler. 
+   The following example will show you an alert message when the keydown event occurs.
+   e.g. <input type= "text" onkeydown="alert('You have pressed a key inside text input')">
+        <textarea onkeydown="alert('You have pressed a key inside textarea!')"></textarea>
+
+-> The KeyUp Event(onkeyup)
+ > The keyup event occurs when the user releases a key on the keyboard. 
+   You can handle the keyup event with the onkeyup event handler. 
+   The following example will show you an alert message when the keyup event occurs.
+   e.g. <input type= "text" onkeyup="alert('You have pressed a key inside text input')">
+        <textarea onkeyup="alert('You have pressed a key inside textarea!')"></textarea>
+
+-> The Keypress Event(onkeypress)
+ > The "keypress" event happens when you press a key on the keyboard that corresponds to 
+   a specific character. Not all keys generate a "keypress" event, though. 
+   Keys like Ctrl, Shift, Alt, Esc, Arrow keys, and others won't trigger a "keypress" event,
+   but they will trigger "keydown" and "keyup" events.
+ > To respond to the "keypress" event, you can use a special code called an "event handler" 
+   designed specifically for "keypress" events, called "onkeypress". 
+   In the following example, an alert message will be displayed when the "keypress" event occurs.
+   e.g. <input type= "text" onkeypress="alert('You have pressed a key inside text input')">
+        <textarea onkeypress="alert('You have pressed a key inside textarea!')"></textarea>
