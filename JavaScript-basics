@@ -734,3 +734,6 @@ its reference must include every object that contains it, separated by a dot. Th
    In the following example, an alert message will be displayed when the "keypress" event occurs.
    e.g. <input type= "text" onkeypress="alert('You have pressed a key inside text input')">
         <textarea onkeypress="alert('You have pressed a key inside textarea!')"></textarea>
+
+-> Form Events
+ > 
