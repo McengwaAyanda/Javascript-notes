@@ -736,4 +736,7 @@ its reference must include every object that contains it, separated by a dot. Th
         <textarea onkeypress="alert('You have pressed a key inside textarea!')"></textarea>
 
 -> Form Events
- > 
+ > The Focus Event (onfocus)
+ The focus event occurs when the user gives focus to an element on a web page. 
+ You can handle the focus event with the onfocus event handler. 
+
