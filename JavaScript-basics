@@ -21,8 +21,7 @@ JavaScript does not make a distinction between Integers and Floating-point value
 Variables allow computers to store and manipulate data in a dynamic fashion. They do this by using a "label" to point to the data rather than using the data itself.
 Any of the 8 data types may be stored in a variable 
 Variables in JavaScript are declared using the "Var" keyword and you can declare multiple variables using this keyword.
-1. Single declaration e.g  var name;
-2. multiple declaration e.g. var name, money;
+https://d24jp206mxeyfm.cloudfront.net/assets/courseware/v1/ec24721685f812fcfebfcfd0abc18eec/asset-v1:CITI+CAP003+2021+type@asset+block/javascript_snippet1.PNG
 Storing a value in a variable is called "Variable Initialization". You can initialize a variable at the time of creation or at anytime when you need to use the variable
 Use the "Var" keyword only for declaratin or initialization. You should not declare the same variable twice.
 JavaScript is an untyped language. This means it can hold a value of any data type. The value type of a variable can change during execution of the program 
