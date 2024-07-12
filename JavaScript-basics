@@ -15,6 +15,7 @@ Javascript allows you to work with primitive data types
 1. Numbers e.g. 123, 120.50, etc.
 2. Strings of text e.g. "This is a string".
 3. Boolean e.g. true or false.
+https://d24jp206mxeyfm.cloudfront.net/assets/courseware/v1/80f08698924ea7d02135704a257e1660/asset-v1:CITI+CAP003+2021+type@asset+block/javascript_snippet3.PNG
 Javascript also defines two trivial data types: Null and Undefined.
 JavaScript supports a composit data type known as an Object.
 JavaScript does not make a distinction between Integers and Floating-point values. All members in JavaScript are represented as floating-point values.
